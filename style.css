@@ -1,110 +1,106 @@
-@import url(https://fonts.google.com/specimen/Lexend+Deca);
-@import url(https://fonts.google.com/specimen/Big+Shoulders+Display);
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+@import url("https://fonts.google.com/specimen/Big+Shoulders+Display");
 
-
-  body {
-    background: hsl(0, 0%, 95%);
-    background-repeat: no-repeat;
-    padding: 50px 0;
-  }  
-
-  h1, button{
-    color: hsl(0, 0%, 95%);
-  }
-
-  p {
-    color: hsla(0, 0%, 100%, 0.75);
-  }
-
-  .container {
-    margin: 0 auto;
-    width:65vw;
-    height: 70vh;
-    
-    
-    margin-top: 50px;
-    position: relative;
-  } 
-
-  .container{
-    display: flex;
-    
-    
-  }
-
- .wrapper.orange{
-     width: 33.3%;
-     height: 100%;
-     background:hsl(31, 77%, 52%) ;
-     border-radius: 7px 0 0 7px;
- } 
-
- .wrapper.dark-cyan{
-   width: 33.3%;
-   height: 100%;
-   background: hsl(184, 100%, 22%);
+@media screen and (max-width: 1440px){
+ body{
+    background-color:hsl(0, 0%, 95%);
+    padding:0;
+    margin:0;
  }
 
- .wrapper.very-dark-cyan{
-   width: 33.3%;
-   height: 100%;
-   background:hsl(179, 100%, 13%) ;
-   border-radius: 0 7px 7px 0;
- }
-
- img {
-   margin: 47px 0 0px 47px;
- }
-
-.area {
-  padding: 20px 30px 20px 30px;
+.container{
+    display:flex;
+    justify-content:center;
+    margin:120px 80px 20px;
 }
 
-p {
-  font-family: 'Lexend Deca', sans-serif;
-  font-weight: 400;
-  
-
-}
-
-.text {
-  margin: 15px 0;
-  padding: 7px;
-  line-height: 23px;
-}
-
-
-.btn {
+.container > div {
+  padding : 30px;
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.btn{
+.orange{
+    background-color: hsl(31, 77%, 52%);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.green{
+    background-color:hsl(184, 100%, 22%);
+}
+
+.green2{
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.title{
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+
+}
+
+.description{
+    max-width: 250px;
+    line-height: 30px;
+    font-size: 15px;
+    color: hsl(0, 0%, 95%);
+    
+}
+input[type=button]{
+    border-radius: 20px;
+    width:95px;
+    height:30px;
+    font-size: 10px;
+    border: none;
+}
+
+input[type=button]:hover{
+    border:1px solid white;
+    color:white;
+    background: transparent;
+}
+
+.first{
+   color: hsl(31, 77%, 52%)
+}
+
+.second{
+    color:hsl(184, 100%, 22%);
+}
+
+.last{
+    color:hsl(179, 100%, 13%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+}
   
-}
 
-button{
-  border-radius: 20px;
-  padding: 10px;
-  height: 40px;
-  width: 125px;
-  cursor: pointer;
-  border: 0;
-  transition: 0.3s;
-  color: hsl(184, 100%, 22%);
-}
 
-button:hover {
-  background:transparent;
-  color: #fff;
-}
+@media screen and (max-width: 768px) {
+  .container {
+   flex-direction: column;
+   margin: 0;
+  }
 
-.wrapper.very-dark-cyan:nth-of-type(2) button{
-  color: hsl(179, 100%, 13%);
-
+  .container > div {
+    border-radius: 0;
+  }
+  
+  .attribution {
+    padding: 40px 0;
+  }
 }
